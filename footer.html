@@ -1,0 +1,187 @@
+<div class="div-line-1">
+
+</div>
+
+<div class="div-brand-name-big-footer animated from-right">
+    <h1 class="brand-name-big-footer">
+        MG-YACHTS
+    </h1>
+</div>
+
+
+<div class="div-slogan-text-footer animated from-left">
+    <p class="slogan-text-footer">
+        Offering bespoke luxury yacht experiences across the world’s <br> most stunning destinations.
+    </p>
+</div>
+
+<div class="div-line-2">
+
+</div>
+
+
+<div class="div-whole-footer-div">
+
+<div class="div-footer-contact">
+
+
+
+    <div class="div-contact-info-footer animated from-left">
+        <p class="contact-info-footer">
+            Contact Info
+        </p>
+    </div>
+
+
+    <div class="div-phone-numbers-footer animated from-left">
+
+        <div style="cursor: pointer;" onclick="callNumber()" class="div-contact-info-footer1">
+            <p class="contact-info-footer2">
+                +41 76650 2686
+            </p>
+        </div>
+        <div style="display: none;" class="div-contact-info-footer11">
+            <p class="contact-info-footer22">
+                +41 06
+            </p>
+        </div>
+            
+    </div>
+
+
+    <div class="div-phone-numbers-footer1 animated from-left">
+
+        <div style="cursor: pointer;" onclick="sendEmail()" class="div-contact-info-footer111">
+            <p class="contact-info-footer222">
+                mg@charteryachts.info
+            </p>
+        </div>
+        <div style="display: none;" class="div-contact-info-footer1111">
+            <p class="contact-info-footer2222">
+                +gmail
+            </p>
+        </div>
+            
+    </div>
+
+
+    <div class="div-contact-info-footer animated from-left">
+        <p class="contact-info-footer">
+            Social
+        </p>
+    </div>
+
+
+    <div class="div-buttons-social animated from-left">
+        <div class="div-img1-social">
+            <img class="img1-social" src="images/Frame 55.svg" alt="">
+        </div>
+
+        <div class="div-img2-social">
+            <img class="img2-social" src="images/Frame 54.svg" alt="">
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+<div class="div-footer-fotm-2 animated from-right">
+
+    <div class="email-adress-footer-input scroll-left-animation">
+        <div class="email-adress-footer-input-div">
+            <input id="email" name="email" class="input-email-adress" placeholder="EMAIL ADDRESS" type="text">
+        </div>
+        <div class="email-adress-submit-button">
+            <button class="button-email-arrow-footer" onclick="submitEmail()">→</button>
+        </div>
+    </div>
+
+    <div class="div-paragraph-after-input-text">
+        <p class="paragraph-after-input-text">
+            Stay updated with our latest luxury yacht <br> experiences. And offers
+        </p>
+    </div>
+    
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="div-pages-and-end-logo">
+    <div class="div-img-logo-footer animated from-left">
+        <img class="img-logo-footer" src="images/Frame 3.svg" alt="">
+    </div>
+    <div class="div-pages-paragraph-footer animated from-right">
+        <p class="pages-paragraph-footer">
+            Home
+        </p>
+        <p class="pages-paragraph-footer">
+            About us
+        </p>
+        <p class="pages-paragraph-footer">
+            Contact
+        </p>
+    </div>
+</div>
+
+
+<script>
+    function callNumber() {
+        window.location.href = "tel:+41764627005"; 
+    }
+
+
+    function sendWhatsAppMessage() {
+    var phoneNumber = "41764627005";
+    var message = encodeURIComponent("Hello, I am interested in your services. Could you provide more details?"); // Muokkaa tätä viestiä
+    var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+    
+    window.location.href = whatsappUrl;
+}
+
+
+
+function sendEmail() {
+    var email = "mg@charteryachts.info";
+    var subject = encodeURIComponent("Inquiry about your services"); // Sähköpostin aihe
+    var body = encodeURIComponent("Hello,\n\nI am interested in your services. Could you provide more details?\n\nBest regards,"); // Sähköpostin viesti
+    
+    var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+    
+    window.location.href = mailtoLink;
+}
+
+
+
+
+
+
+
+function revealOnScroll() {
+    let elements = document.querySelectorAll('.animated');
+    let windowHeight = window.innerHeight;
+
+    elements.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 50) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+
+    </script>
